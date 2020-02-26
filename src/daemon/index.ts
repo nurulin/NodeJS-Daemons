@@ -25,12 +25,12 @@ export class App extends ExpressDaemon<CONTROLLERS> implements DaemonInterface {
         APPLICATIONS.forEach((item) => this.initController(item));
     }
 
-    applications() {
+    applications(req: express.Request, res: express.Response) {
         res.end(answer(SERVERCODES.SUCCESS, {}, null));
     }
 
     application(req: express.Request, res: express.Response) {
-	    res.end(answer(SERVERCODES.SUCCESS, {}, null));
+	res.end(answer(SERVERCODES.SUCCESS, {}, null));
     }
 
     async status(req: express.Request, res: express.Response) {

@@ -6,4 +6,4 @@
 
 # production
 package-lock.json
-/build
+/dist
